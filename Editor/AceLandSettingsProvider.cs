@@ -20,6 +20,7 @@ namespace AceLand.ProjectSetting.Editor
         {
             base.OnDeactivate();
             Undo.undoRedoPerformed -= OnUndoRedoPerformed;
+            Undo.ClearUndo(Settings.targetObject);
         }
 
         public override void OnGUI(string searchContext)
