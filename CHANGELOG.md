@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.0.2] - 2026-11-24
+### Added
+- [Editor] add virtual states in `AceLandSettingsProvider`
+
 ## [1.0.1] - 2026-08-28
 ### Fixed 
 - existing settings asset being overwritten by a new default one on the first

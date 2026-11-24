@@ -7,9 +7,9 @@ namespace AceLand.ProjectSetting
     public abstract class ProjectSettings<T> : ScriptableObject
         where T : ScriptableObject
     {
-        private const string PATH = "Assets/Resources";
-
 #if UNITY_EDITOR
+        private const string PATH = "Assets/Resources";
+        
         private static T GetOrCreateSettings()
         {
             var settingName = typeof(T).Name;

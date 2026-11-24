@@ -36,6 +36,7 @@ namespace AceLand.ProjectSetting.Editor
             if (change.changed)
             {
                 Settings.ApplyModifiedProperties();
+                OnChanged(Settings);
                 EditorUtility.SetDirty(Settings.targetObject);
             }
             else
@@ -43,8 +44,10 @@ namespace AceLand.ProjectSetting.Editor
                 Settings.ApplyModifiedPropertiesWithoutUndo();
             }
         }
-        
-        private void OnUndoRedoPerformed()
+
+        protected virtual void OnChanged(SerializedObject settings) { }
+
+        protected virtual void OnUndoRedoPerformed()
         {
             // Refresh the serialized object when undo/redo is performed
             Settings.Update();
